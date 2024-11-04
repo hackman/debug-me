@@ -1,3 +1,8 @@
+All of the information in this repo is related to the:
+  Debug me, if you can! Workshop.
+
+This is a plan 
+
 1. strace broken.bin
 2. strace PHP-FPM with DB logging
 3. ltrace Two different versions of the curl library 
@@ -9,18 +14,11 @@
 5.1. set breakpoint
 6. gdb read a coredump 
 
-debugme.1h.cx
-|- broken.bin
-|- strace.txt
-|- ltrace.txt
-|- gdb.txt
-|- .gdbinit
-|- 
 
-strace ./small
+strace ./broken.bin
 
-strace -e trace=file ./small
-strace -e status=failed ./small
+strace -e trace=file ./broken.bin
+strace -e status=failed ./broken.bin
 
 strace examples:
  -f					- follow forks 
@@ -74,11 +72,11 @@ gdb examples:
   run
   break [file:][function|line]
   list [file:]function
-  bt
-  print
+  backtrace bt
+  print p
   c
-  next
-  step
+  next	n
+  step	s
   .gdbinit examples
   disassemble 
 
